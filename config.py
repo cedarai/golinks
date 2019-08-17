@@ -1,0 +1,9 @@
+CORP_NAME = "Cedar AI"
+GOLINKS_HOSTNAME = "go"
+GOLINKS_FQDN = "go.corp.cedarai.com"
+URL_ALLOWED_SCHEMAS = ['http', 'https', 'mailto', 'ftp']
+ENABLE_GOOGLE_GROUPS_INTEGRATION = False
+USE_APP_ENGINE_SERVICE_ACCOUNT  = True
+USE_MEMCACHE = True
+MEMCACHE_TTL = 3600
+GSUITE_DIRECTORY_ADMIN_USER = "admin@cedarai.com"
