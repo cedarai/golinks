@@ -24,6 +24,12 @@ def errorPage(response, code, message):
   response.set_status(code)
 
 
+def notFoundPage(response, link):
+  context = {'link': link, 'corpname': config.CORP_NAME}
+  response.write(render('template/notfound.html', context))
+  response.set_status(404)
+
+
 def isValidUrl(url):
   o = urlparse(url)
   if o.scheme in config.URL_ALLOWED_SCHEMAS:
@@ -244,7 +250,7 @@ class RedirectLink(webapp2.RequestHandler):
       self.redirect('/links/my')
       return
     logging.info("%s accessed non-existent URL /%s" % (user.email(), link))
-    errorPage(self.response, 404, "Not Found!")
+    notFoundPage(self.response, link)
 
 
 app = webapp2.WSGIApplication([

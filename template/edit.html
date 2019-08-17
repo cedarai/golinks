@@ -25,12 +25,12 @@
               <div class="mdl-card__supporting-text">
                 Shortened link: {{ hostname }}/
                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col">
-			<input class="mdl-textfield__input" type="text" id="key" name="key" value="{{ key }}" {% if key %}readonly{% endif %}>
+			<input class="mdl-textfield__input" type="text" id="key" name="key" value="{{ key }}" {% if key %}readonly{% endif %}{% if not key %}autofocus{% endif %}>
                   <label class="mdl-textfield__label" for="key">code-review</label>
                 </div>
                 Original link:
                 <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col">
-			<input class="mdl-textfield__input" type="text" id="url" name="url" value="{{ url }}">
+			<input class="mdl-textfield__input" type="text" id="url" name="url" value="{{ url }}" {% if key %}autofocus{% endif %}>
                   <label class="mdl-textfield__label" for="url">http://example.com</label>
                 </div>
               </div>

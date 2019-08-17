@@ -2,7 +2,7 @@
 <html lang=en>
 <head>
   <meta charset="utf-8">
-  <title>Error</title>
+  <title>Not Found</title>
   <style type="text/css">
     html,code{font:15px/22px arial,sans-serif}
     html{background:#fff;color:#222;padding:15px}
@@ -14,8 +14,7 @@
   <p>
     <span style="font-size: 200%;color:black">{{ corpname }}</span>
   </p>
-  <p><b>Error.</b> {{ message }}</p>
-  <p>Therefore we served HTTP status code {{ code }}.</p>
+  <p>The link <b>go/{{ link }}</b> doesn't exist. <a href="/edit/{{ link }}">Create it</a>!
   <p></p>
 </body>
 </html>
