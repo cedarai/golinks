@@ -1,6 +1,6 @@
 CORP_NAME = "Cedar AI"
 GOLINKS_HOSTNAME = "go"
-GOLINKS_FQDN = "go.corp.cedarai.com"
+GOLINKS_FQDN = "goto.corp.cedarai.com"
 URL_ALLOWED_SCHEMAS = ['http', 'https', 'mailto', 'ftp']
 ENABLE_GOOGLE_GROUPS_INTEGRATION = False
 USE_APP_ENGINE_SERVICE_ACCOUNT  = True
