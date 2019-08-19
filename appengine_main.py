@@ -200,10 +200,10 @@ class RedirectLink(webapp2.RequestHandler):
         if l.public:
           username = "public-user"
         else:
-          username = user.email()
           if not user:
             self.redirect(users.create_login_url(self.request.path))
             return
+          username = user.email()
           if l.visibility:
             if config.ENABLE_GOOGLE_GROUPS_INTEGRATION:
               memcacheKey = "v_%s_%s" % (user.user_id(), link)
